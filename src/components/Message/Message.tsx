@@ -50,7 +50,7 @@ export default function Message() {
                     label="Name"
                     sx={{
                         alignSelf: "center",
-                        width: 909,
+                        width: "50%",
                         mt: 5
                     }}
                     InputProps={{ sx: { borderRadius: 0, border: 1, borderColor: "#2D2B2B" } }}
@@ -60,7 +60,7 @@ export default function Message() {
                     label="Phone No"
                     sx={{
                         alignSelf: "center",
-                        width: 909,
+                        width: "50%",
                         mt: 5
                     }}
                     InputProps={{ sx: { borderRadius: 0, border: 1, borderColor: "#2D2B2B" } }}
@@ -70,7 +70,7 @@ export default function Message() {
                     label="Email"
                     sx={{
                         alignSelf: "center",
-                        width: 909,
+                        width: "50%",
                         mt: 5
                     }}
                     InputProps={{ sx: { borderRadius: 0, border: 1, borderColor: "#2D2B2B" } }}
@@ -80,7 +80,7 @@ export default function Message() {
                     label="Message"
                     sx={{
                         alignSelf: "center",
-                        width: 909,
+                        width: "50%",
                         mt: 5,
                     }}
                     InputProps={{
@@ -103,7 +103,7 @@ export default function Message() {
                         color: "white",
                         alignSelf: "center",
                         my: 5,
-
+                        textTransform: "capitalize"
                     }}
                     className={manrope.className}
                 >

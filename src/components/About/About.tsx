@@ -17,28 +17,46 @@ export default function About() {
     return (
         <Container
             sx={{ maxWidth: '92%', my: 30 }}
-            maxWidth={false}
         >
             <Box
-                sx={{ display: "flex", justifyContent: "center" }}
+                sx={{
+                    display: {
+                        mobile: "block",
+                        laptop: "flex"
+                    },
+                    width: "100%",
+                    justifyContent: "center"
+                }}
             >
                 <Typography
                     sx={{
                         fontFamily: "Playfair Display",
                         fontWeight: 700,
                         fontSize: "60px",
-                        mr: 20,
+                        mr: {
+                            mobile: 0,
+                            laptop: 10
+                        },
                         display: "flex",
                         alignItems: 'center',
-                        color: "#0E204E"
+                        color: "#0E204E",
+                        width: {
+                            mobile: "100%",
+                            laptop: "317px"
+                        },
+                        textAlign: {
+                            mobile: "center",
+                            tablet: "center",
+                            laptop: "start",
+                        }
                     }}
                 >
-                    About<br />
-                    Pineapple<br />
-                    Island
+                    About Pineapple Island
                 </Typography>
                 <Card sx={{
-                    display: 'flex',
+                    display: {
+                        desktop: "flex"
+                    },
                     borderRadius: 0
                 }}>
 

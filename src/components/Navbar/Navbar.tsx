@@ -17,15 +17,23 @@ const manrope = Manrope({
 export default function Navbar() {
     return (
         <>
-            <AppBar position="static" sx={{ backgroundColor: "white", boxShadow: "none" }} >
+            <AppBar position="static"
+                sx={{
+                    backgroundColor: "white",
+                    boxShadow: "none"
+                }}
+            >
                 <Container sx={{ maxWidth: '92%' }} maxWidth={false} >
-                    <Toolbar disableGutters>
+                    <Toolbar>
                         <Typography
                             sx={{
                                 display: { xs: 'none', md: 'flex' },
                                 fontFamily: 'Playfair Display',
                                 fontWeight: 700,
-                                fontSize: '32px',
+                                fontSize: {
+                                    mobile: "20px",
+                                    tablet: '32px'
+                                },
                                 color: '#0E204E',
                                 height: "168px",
                                 textDecoration: 'none',

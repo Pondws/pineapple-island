@@ -43,26 +43,29 @@ export default function offer() {
             </Typography>
 
             <Grid container >
-                <Grid item desktop={6}>
+                <Grid item laptop={12} desktop={6}
+                    sx={{
+                        display: "flex",
+                        alignContent: {
+                            laptop: "center"
+                        }
+                    }}
+                >
+
                     <Image
                         src={image4}
                         alt="image"
                         width={567}
                         height={582}
-                        // style={{
-                        //     zIndex: 2
-                        // }}
                     />
+
                     <Box
                         sx={{
-                            width: 412,
-                            height: 358,
+                            width: 235,
+                            height: 445,
                             borderRadius: 0,
                             backgroundColor: "#0E204E",
-                            position: "absolute",
-                            left: 548,
-                            top: 3153,
-                            zIndex: -1
+                            alignSelf: "center",
                         }}
                     />
                 </Grid>
@@ -200,9 +203,18 @@ export default function offer() {
                         }}
                     />
                     <Box
+                        // sx={{
+                        //     width: 412,
+                        //     height: 358,
+                        //     borderRadius: 0,
+                        //     backgroundColor: "#0E204E",
+                        //     flexDirection: "row-reverse",
+                        //     alignSelf: "center",
+                        //     zIndex: -1
+                        // }}
                         sx={{
-                            width: 412,
-                            height: 358,
+                            width: 235,
+                            height: 445,
                             borderRadius: 0,
                             backgroundColor: "#0E204E",
                             flexDirection: "row-reverse",

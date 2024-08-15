@@ -20,15 +20,28 @@ const manrope = Manrope({
 export default function Features() {
     return (
         <Container
-            sx={{ maxWidth: '70%', mb: 30 }}
+            sx={{
+                maxWidth: {
+                    mobile: "100%",
+                    laptop: "70%"
+                },
+                padding: {
+                    mobile: "0"
+                },
+                mb: 30,
+            }}
             maxWidth={false}
         >
             <Grid container
                 sx={{
-                    mb: 30
+                    mb: 30,
+                    display: {
+                        mobile: "none",
+                        tablet: "flex"
+                    }
                 }}
             >
-                <Grid item xs={7}
+                <Grid item desktop={7}
                     sx={{
                         display: "flex",
                     }}
@@ -51,7 +64,7 @@ export default function Features() {
                         }}
                     />
                 </Grid>
-                <Grid item xs={5}>
+                <Grid item desktop={5}>
                     <Typography
                         sx={{
                             fontFamily: "Playfair Display",
@@ -59,7 +72,7 @@ export default function Features() {
                             fontSize: "60px",
                             color: '#0E204E',
                             lineHeight: "80px",
-                            mb: 2
+                            mb: 2,
                         }}
                     >
                         Amazing Features
@@ -355,9 +368,12 @@ export default function Features() {
                     flexDirection: "row-reverse",
                 }}
             >
-                <Grid item xs={7}
+                <Grid item mobile={0} desktop={7}
                     sx={{
-                        display: "flex",
+                        display: {
+                            mobile: "none",
+                            desktop: "flex"
+                        },
                         flexDirection: "row-reverse",
                         alignContent: "flex-end"
                     }}
@@ -384,51 +400,87 @@ export default function Features() {
                     />
                 </Grid>
 
-                <Grid item xs={5}
+                <Grid item mobile={12} desktop={5}
                     sx={{
                         display: "flex",
-                        justifyContent: "flex-start"
+                        justifyContent: "flex-start",
+                        textAlign: {
+                            mobile: "center",
+                            laptop: "center",
+                            desktop: "start"
+                        },
+                        backgroundColor: {
+                            mobile: "#0E204E",
+                            laptop: "transparent"
+                        },
+                        height: {
+                            mobile: 262,
+                            laptop: "auto"
+                        },
+                     
                     }}
                 >
                     <Box
                         sx={{
-                            my: "auto"
+                            my: "auto",
+                            color: {
+                                mobile: "#fff",
+                                laptop: '#0E204E'
+                            },
                         }}
                     >
                         <Typography
                             sx={{
                                 fontFamily: "Playfair Display",
                                 fontWeight: 700,
-                                fontSize: "60px",
-                                color: '#0E204E',
-                                lineHeight: "80px"
+                                fontSize: {
+                                    mobile: "24px",
+                                    desktop: "60px"
+                                },
+                                lineHeight: "80px",
+                                width: {
+                                    laptop: "100%",
+                                    desktop: 317
+                                }
                             }}
                         >
-                            Become an <br /> Agent
+                            Become an Agent
                         </Typography>
 
                         <Typography
                             sx={{
-                                fontSize: 20,
-                                my: 2
+                                fontSize: {
+                                    mobile: 16,
+                                    tablet: 20
+                                },
+                                my: 2,
+                                width: {
+                                    laptop: "100%",
+                                    desktop: 417
+                                },
                             }}
                             className={manrope.className}
                         >
-                            a community that gives you a taste of <br />
-                            happiness, a place you’ll love to live and an <br />
+                            a community that gives you a taste of
+                            happiness, a place you’ll love to live and an
                             opportunity to build a home.
                         </Typography>
 
                         <Button
-                            style={{
-                                backgroundColor: "#0E204E",
+                            sx={{
+                                backgroundColor: {
+                                    mobile: "#fff",
+                                    laptop: "#0E204E"
+                                },
                                 borderRadius: 0,
                                 width: 239,
                                 height: 62,
                                 fontSize: 18,
-                                color: "white",
+                                color: {
+                                    mobile: "#0E204E",
+                                    laptop: "#fff"
+                                },
                                 alignSelf: "center",
-                                margin: 5,
                                 textTransform: "capitalize"
                             }}
                             className={manrope.className}

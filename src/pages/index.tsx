@@ -31,20 +31,6 @@ const manrope = Manrope({
   subsets: ['latin'],
 })
 
-// declare module '@mui/material/styles' {
-//   interface BreakpointOverrides {
-//     xs: false; // removes the `xs` breakpoint
-//     sm: false;
-//     md: false;
-//     lg: false;
-//     xl: false;
-//     mobile: true; // adds the `mobile` breakpoint
-//     tablet: true;
-//     laptop: true;
-//     desktop: true;
-//   }
-// }
-
 export default function Home() {
   return (
     <>
@@ -54,9 +40,11 @@ export default function Home() {
       {/* Why Choose */}
       <Box
         sx={{
-          width: 1920,
           height: 700,
-          backgroundColor: "#0E204E",
+          backgroundColor: {
+            mobile: "none",
+            tablet: "#0E204E"
+          },
           mb: 30,
           clipPath: "polygon(0% 0%, 100% 0, 100% 100%, 75% 80%, 0% 100%)",
         }}
@@ -115,6 +103,7 @@ export default function Home() {
 
             <Card sx={{
               borderRadius: 0,
+              zIndex: 999
             }}>
               <Image
                 src={image3}

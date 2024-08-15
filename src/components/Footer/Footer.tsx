@@ -10,23 +10,42 @@ export default function Footer() {
     return (
         <>
             <Box sx={{
-                mt: 30,
-                width: 1920,
-                height: 396,
+                mt: {
+                    laptop: 30
+                },
+                width: "100%",
+                height: {
+                    mobile: 88,
+                    laptop: 396
+                },
                 backgroundColor: "#0E204E",
-                clipPath: "polygon(0 26%, 11.5% 0, 100% 32%, 100% 100%, 0 100%);",
-                color: "white"
+                clipPath: {
+                    mobile: "flex",
+                    laptop: "polygon(0 26%, 11.5% 0, 100% 32%, 100% 100%, 0 100%)"
+                },
+                color: "white",
+                alignContent: {
+                    mobile: "center",
+                    tablet: "none"
+                }
             }}>
                 <Container maxWidth={false}
                     sx={{
-                        maxWidth: "50%"
+                        maxWidth: {
+                            laptop: "70%",
+                            desktop: "50%"
+                        },
+                        display: {
+                            mobile: "none",
+                            laptop: "flex"
+                        }
                     }}
                 >
-                    <Grid container >
-                        <Grid item xs={6}
+                    <Grid container>
+                        <Grid item laptop={6}
                             sx={{
                                 color: "white",
-                                pt: 7,
+                                pt: 4,
                             }}
                         >
                             <Box>
@@ -51,9 +70,9 @@ export default function Footer() {
                                 </Typography>
                             </Box>
                         </Grid>
-                        <Grid item xs={6}
+                        <Grid item laptop={6}
                             sx={{
-                                pt: 15,
+                                pt: 10,
                                 pl: 4.5,
                                 display: "flex",
                                 alignContent: "flex-end",
@@ -74,11 +93,11 @@ export default function Footer() {
                                 sx={{
                                     fontSize: 20,
                                     py: 2,
+                                    width: 315
                                 }}
                                 className={manrope.className}
                             >
-                                Keep up with our newsletter to get <br />
-                                updates about projects and offers
+                                Keep up with our newsletter to get updates about projects and offers
                             </Typography>
                             <Box
                                 sx={{
@@ -89,7 +108,7 @@ export default function Footer() {
                                     sx={{
                                         backgroundColor: "white",
                                         borderRadius: 0,
-                                        width: 419,
+                                        width: "100%",
                                         height: 46,
 
                                     }}
@@ -105,11 +124,37 @@ export default function Footer() {
                                 >
                                     Subscribe
                                 </Typography>
-
                             </Box>
                         </Grid>
                     </Grid>
+
                 </Container>
+
+                <Box
+                    sx={{
+                        display: {
+                            laptop: "none"
+                        },
+                        textAlign: "center",
+                    }}
+                >
+                    <Typography
+                        sx={{
+                            color: "#fff",
+                            fontSize: 18
+                        }}
+                    >
+                        Pineapple Island
+                    </Typography>
+                    <Typography
+                        sx={{
+                            fontSize: 10
+                        }}
+                    >
+                       &copy;	Copyright 2021 Glowdsgn All Rights Reserved
+                    </Typography>
+                </Box>
+
             </Box>
         </>
 
