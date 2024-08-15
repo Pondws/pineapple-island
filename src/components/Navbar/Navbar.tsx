@@ -90,13 +90,14 @@ export default function Navbar() {
                         <Box>
                             <Button
                                 variant="text"
-                                sx={{
+                                style={{
                                     backgroundColor: "#0E204E",
                                     borderRadius: 0,
                                     width: 188,
                                     height: 50,
                                     fontSize: 20,
-                                    color: "white"
+                                    color: "white",
+                                    textTransform: "capitalize"
                                 }}
                                 className={manrope.className}
                             >
