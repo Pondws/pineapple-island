@@ -16,8 +16,17 @@ const manrope = Manrope({
 export default function About() {
     return (
         <Container
-            sx={{ maxWidth: '92%', my: 30 }}
+            sx={{
+                maxWidth: {
+                    laptop: '92%'
+                },
+                my: {
+                    mobile: 5,
+                    laptop: 30
+                },
+            }}
         >
+
             <Box
                 sx={{
                     display: {
@@ -32,12 +41,18 @@ export default function About() {
                     sx={{
                         fontFamily: "Playfair Display",
                         fontWeight: 700,
-                        fontSize: "60px",
+                        fontSize: {
+                            mobile: 24,
+                            laptop: 60
+                        },
                         mr: {
                             mobile: 0,
                             laptop: 10
                         },
-                        display: "flex",
+                        display: {
+                            mobile: "block",
+                            laptop: "flex"
+                        },
                         alignItems: 'center',
                         color: "#0E204E",
                         width: {
@@ -57,22 +72,43 @@ export default function About() {
                     display: {
                         desktop: "flex"
                     },
+                    my: {
+                        mobile: 2,
+                        laptop: 0
+                    },
                     borderRadius: 0
                 }}>
 
-                    <Image
-                        src={image2}
-                        alt="test"
-                        width={728}
-                        height={620}
-                    />
+                    <Box
+                        sx={{
+                            width: {
+                                mobile: '335',
+                                laptop: '728px'
+                            },
+                            height: {
+                                mobile: '392px',
+                                laptop: '620px'
+                            },
+                            position: 'relative',
+                            
+                        }}>
+                        <Image
+                            src={image2}
+                            alt='logo'
+                            layout='fill'
+                            objectFit='cover'
+                        />
+                    </Box>
 
                     <Box
                         sx={{
                             backgroundColor: "#0E204E",
                             width: "433px",
                             height: "620px",
-                            display: "flex",
+                            display: {
+                                mobile: "none",
+                                laptop: "flex"
+                            },
                             alignItems: "center"
                         }}
                     >

@@ -20,30 +20,57 @@ export default function Message() {
                     fontFamily: "Playfair Display",
                     fontWeight: 700,
                     textAlign: "center",
-                    fontSize: "60px",
+                    fontSize: {
+                        mobile: 24,
+                        laptop: 60
+                    },
                     color: '#0E204E',
                     lineHeight: "79.98px"
                 }}
             >
                 Stay In Touch
             </Typography>
+
             <Typography
                 sx={{
                     textAlign: "center",
                     lineHeight: "36px",
                     fontFamily: "Manrope",
-                    fontSize: "20px"
+                    fontSize: "20px",
+                    display: {
+                        mobile: "none",
+                        laptop: 'block'
+                    }
                 }}
                 className={manrope.className}
             >
                 Are you curious about Pineapple Island? Send a message
             </Typography>
 
+            <Typography
+                sx={{
+                    textAlign: "center",
+                    lineHeight: "36px",
+                    fontFamily: "Manrope",
+                    px: 2,
+                    display: {
+                        mobile: "block",
+                        laptop: 'none'
+                    }
+                }}
+                className={manrope.className}
+            >
+                If you are interested in finding out more about The Discovery Village, leave a message
+            </Typography>
+
             <Box
                 sx={{
                     textAlign: "center",
-                    display: "flex",
-                    flexDirection: "column"
+                    display: {
+                        mobile: "none",
+                        laptop: "flex"
+                    },
+                    flexDirection: "column",
                 }}
             >
                 <TextField
@@ -104,6 +131,68 @@ export default function Message() {
                         alignSelf: "center",
                         my: 5,
                         textTransform: "capitalize"
+                    }}
+                    className={manrope.className}
+                >
+                    Send
+                </Button>
+            </Box>
+
+            <Box
+                sx={{
+                    textAlign: "center",
+                    px: 5,
+                    display: {
+                        laptop: "none"
+                    }
+                }}
+            >
+                <TextField
+                    label="Name"
+                    fullWidth
+                    variant="standard"
+                    sx={{
+                        py: 1
+                    }}
+                />
+                 <TextField
+                    label="Phone No"
+                    fullWidth
+                    variant="standard"
+                    sx={{
+                        py: 1
+                    }}
+                />
+                 <TextField
+                    label="Email"
+                    fullWidth
+                    variant="standard"
+                    sx={{
+                        py: 1
+                    }}
+                />
+
+                <label>Message</label>
+                 <TextField
+                    // label="Name"
+                    fullWidth
+                    // variant="standard"
+                    sx={{
+                        py: 1,
+                    }}
+                />
+                <Button
+                    sx={{
+                        backgroundColor: "#0E204E",
+                        borderRadius: "5px",
+                        width: 82,
+                        height: 40,
+                        fontSize: 16,
+                        color: "white",
+                        alignSelf: "center",
+                        textTransform: "capitalize",
+                        mt: 1,
+                        mb: 7
                     }}
                     className={manrope.className}
                 >

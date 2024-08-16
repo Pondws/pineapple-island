@@ -23,11 +23,21 @@ export default function Navbar() {
                     boxShadow: "none"
                 }}
             >
-                <Container sx={{ maxWidth: '92%' }} maxWidth={false} >
-                    <Toolbar>
+                <Container
+                    sx={{
+                        maxWidth: {
+                            laptop: '92%'
+                        }
+                    }}
+                >
+                    <Toolbar
+                        sx={{
+                            p: 0
+                        }}
+                    >
                         <Typography
                             sx={{
-                                display: { xs: 'none', md: 'flex' },
+                                display: "flex",
                                 fontFamily: 'Playfair Display',
                                 fontWeight: 700,
                                 fontSize: {
@@ -49,68 +59,77 @@ export default function Navbar() {
 
                         <Box
                             sx={{
-                                display: 'flex',
-                                flexWrap: 'wrap',
-                                justifyContent: 'center',
-                                typography: 'body1',
-                                '& > :not(style) ~ :not(style)': {
-                                    ml: 10,
-                                },
-                                flexGrow: 1
+                                display: {
+                                    mobile: "none",
+                                    laptop: "flex"
+                                }
                             }}
-
                         >
-                            <Link
-                                href="#"
-                                underline="none"
+                            <Box
                                 sx={{
-                                    color: "#000",
-                                    fontSize: 20
+                                    display: 'flex',
+                                    flexWrap: 'wrap',
+                                    justifyContent: 'center',
+                                    typography: 'body1',
+                                    '& > :not(style) ~ :not(style)': {
+                                        ml: 10,
+                                    },
+                                    flexGrow: 1
                                 }}
-                                className={manrope.className}
-                            >
-                                About Us
-                            </Link>
-                            <Link
-                                href="#"
-                                underline="none"
-                                sx={{
-                                    color: "#000",
-                                    fontSize: 20
-                                }}
-                                className={manrope.className}
-                            >
-                                What we do
-                            </Link>
-                            <Link
-                                href="#"
-                                underline="none"
-                                sx={{
-                                    color: "#000",
-                                    fontSize: 20
-                                }}
-                                className={manrope.className}
-                            >
-                                Project
-                            </Link>
-                        </Box>
 
-                        <Box>
-                            <Button
-                                variant="text"
-                                style={{
-                                    backgroundColor: "#0E204E",
-                                    borderRadius: 0,
-                                    width: 188,
-                                    height: 50,
-                                    fontSize: 20,
-                                    color: "white",
-                                    textTransform: "capitalize"
-                                }}
-                                className={manrope.className}
                             >
-                                Get in Touch
-                            </Button>
+                                <Link
+                                    href="#"
+                                    underline="none"
+                                    sx={{
+                                        color: "#000",
+                                        fontSize: 20
+                                    }}
+                                    className={manrope.className}
+                                >
+                                    About Us
+                                </Link>
+                                <Link
+                                    href="#"
+                                    underline="none"
+                                    sx={{
+                                        color: "#000",
+                                        fontSize: 20
+                                    }}
+                                    className={manrope.className}
+                                >
+                                    What we do
+                                </Link>
+                                <Link
+                                    href="#"
+                                    underline="none"
+                                    sx={{
+                                        color: "#000",
+                                        fontSize: 20
+                                    }}
+                                    className={manrope.className}
+                                >
+                                    Project
+                                </Link>
+                            </Box>
+
+                            <Box>
+                                <Button
+                                    variant="text"
+                                    style={{
+                                        backgroundColor: "#0E204E",
+                                        borderRadius: 0,
+                                        width: 188,
+                                        height: 50,
+                                        fontSize: 20,
+                                        color: "white",
+                                        textTransform: "capitalize"
+                                    }}
+                                    className={manrope.className}
+                                >
+                                    Get in Touch
+                                </Button>
+                            </Box>
                         </Box>
                     </Toolbar>
                 </Container>

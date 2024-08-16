@@ -21,13 +21,18 @@ export default function Hero() {
                 alignItems="center"
                 sx={{
                     backgroundColor: {
+                        mobile: "transparent",
                         laptop: "#0E204E"
                     },
                     color: "white",
                     position: "absolute",
                     alignContent: "center",
-                    top: "293px",
+                    top: {
+                        mobile: "none",
+                        laptop: 293
+                    },
                     left: "100px",
+                    display: "none",
                 }}
             >
 
@@ -77,21 +82,43 @@ export default function Hero() {
 
             </Box>
             <Box sx={{
-                display: 'flex',
+                display: {
+                    // mobile: "",
+                    laptop: "flex"
+                },
+                px: {
+                    mobile: 2
+                },
                 flexDirection: 'row-reverse',
             }}
             >
-                <Image
-                    src={image1}
-                    alt={"Pineapple island"}
-                    style={{
-                        clipPath: "polygon(0% 0%, 100% 0, 100% 100%, 75% 80%, 0% 100%)",
+                <Box
+                    sx={{
+                        width: {
+                            mobile: "100%",
+                            laptop: 1368
+                        },
+                        height: {
+                            mobile: 643,
+                            laptop: 717 
+                        },
                         zIndex: -1,
-                        width: "1368px",
-                        height: "717px"
+                        clipPath: "polygon(0% 0%, 100% 0, 100% 100%, 75% 80%, 0% 100%)",
+                
                     }}
+                >
+                    <Image
+                        src={image1}
+                        alt={"Pineapple island"}
+                        style={{
+                            width: "100%",
+                            // height: "auto"
+                        }}
+                        sizes="(max-width: 320px) 280px, (max-width: 480px) 440px, 800px"
+                        objectFit="cover"
+                    />
+                </Box>
 
-                />
             </Box>
         </Box>
     )

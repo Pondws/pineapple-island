@@ -28,7 +28,10 @@ export default function Features() {
                 padding: {
                     mobile: "0"
                 },
-                mb: 30,
+                mb: {
+                    mobile: 10,
+                    laptop: 30
+                },
             }}
             maxWidth={false}
         >
@@ -38,7 +41,11 @@ export default function Features() {
                     display: {
                         mobile: "none",
                         tablet: "flex"
-                    }
+                    },
+                    // p: {
+                    //     mobile: 5,
+                    //     laptop: 0
+                    // }
                 }}
             >
                 <Grid item desktop={7}
@@ -60,7 +67,7 @@ export default function Features() {
                             backgroundColor: "#0E204E",
                             flexDirection: "row-reverse",
                             alignSelf: "center",
-                            zIndex: -1
+                            zIndex: -1,
                         }}
                     />
                 </Grid>
@@ -395,7 +402,8 @@ export default function Features() {
                             backgroundColor: "#0E204E",
                             flexDirection: "row-reverse",
                             alignSelf: "center",
-                            zIndex: -1
+                            zIndex: -1,
+
                         }}
                     />
                 </Grid>
@@ -417,7 +425,8 @@ export default function Features() {
                             mobile: 262,
                             laptop: "auto"
                         },
-                     
+                        px: 3
+
                     }}
                 >
                     <Box
@@ -472,10 +481,22 @@ export default function Features() {
                                     mobile: "#fff",
                                     laptop: "#0E204E"
                                 },
-                                borderRadius: 0,
-                                width: 239,
-                                height: 62,
-                                fontSize: 18,
+                                borderRadius: {
+                                    mobile: "5px",
+                                    laptop: 0
+                                },
+                                width: {
+                                    mobile: 103,
+                                    laptop: 239
+                                },
+                                height: {
+                                    mobile: 40,
+                                    laptop: 62
+                                },
+                                fontSize: {
+                                    mobile: 16,
+                                    laptop: 18
+                                },
                                 color: {
                                     mobile: "#0E204E",
                                     laptop: "#fff"

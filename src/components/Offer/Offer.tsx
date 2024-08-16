@@ -25,8 +25,15 @@ const poppins = Poppins({
 export default function offer() {
     return (
         <Container
-            sx={{ maxWidth: '85%', mb: 30 }}
-            maxWidth={false}
+            sx={{
+                maxWidth: {
+                    laptop: '85%'
+                },
+                mb: {
+                    mobile: 10,
+                    laptop: 30
+                }
+            }}
         >
             <Typography
                 sx={{
@@ -36,13 +43,58 @@ export default function offer() {
                     fontSize: "60px",
                     color: '#0E204E',
                     lineHeight: "80px",
-                    mb: 15
+                    mb: 15,
+                    display: {
+                        mobile: "none",
+                        laptop: "block"
+                    }
                 }}
             >
                 What Pineapple Land Offers
             </Typography>
 
-            <Grid container >
+            <Typography
+                sx={{
+                    fontFamily: "Playfair Display",
+                    fontWeight: 700,
+                    textAlign: "center",
+                    fontSize: "24px",
+                    color: '#0E204E',
+                    lineHeight: "80px",
+                    display: {
+                        mobile: "block",
+                        laptop: "none"
+                    }
+                }}
+            >
+                Pineapple Island Offers
+            </Typography>
+
+            <Box
+                sx={{
+                    width: {
+                        mobile: '100%',
+                        laptop: 'none'
+                    },
+                    height: {
+                        mobile: '387px',
+                        laptop: 'none'
+                    },
+                    position: 'relative',
+                    display: {
+                        mobile: "block",
+                        laptop: "none"
+                    }
+                }}>
+                <Image
+                    src={image4}
+                    alt='image'
+                    layout='fill'
+                    objectFit='cover'
+                />
+            </Box>
+
+            <Grid container>
                 <Grid item laptop={12} desktop={6}
                     sx={{
                         display: "flex",
@@ -51,13 +103,25 @@ export default function offer() {
                         }
                     }}
                 >
-
-                    <Image
-                        src={image4}
-                        alt="image"
-                        width={567}
-                        height={582}
-                    />
+                    <Box
+                        sx={{
+                            width: {
+                                mobile: 'none',
+                                laptop: '567px'
+                            },
+                            height: {
+                                mobile: 'none',
+                                laptop: '582px'
+                            },
+                            position: 'relative',
+                        }}>
+                        <Image
+                            src={image4}
+                            alt='image'
+                            layout='fill'
+                            objectFit='cover'
+                        />
+                    </Box>
 
                     <Box
                         sx={{
@@ -66,6 +130,9 @@ export default function offer() {
                             borderRadius: 0,
                             backgroundColor: "#0E204E",
                             alignSelf: "center",
+                            display: {
+                                mobile: "none"
+                            }
                         }}
                     />
                 </Grid>
@@ -81,6 +148,12 @@ export default function offer() {
                         justifyContent="flex-end"
                         alignItems="center"
                         spacing={18}
+                        sx={{
+                            display: {
+                                mobile: "none",
+                                laptop: "flex"
+                            }
+                        }}
                     >
 
                         <Box
@@ -168,7 +241,6 @@ export default function offer() {
                                 />
                             </Box>
 
-
                             <Typography
                                 sx={{
                                     fontSize: 18
@@ -189,7 +261,10 @@ export default function offer() {
             >
                 <Grid item desktop={6}
                     sx={{
-                        display: "flex",
+                        display: {
+                            mobile: "none",
+                            laptop: "flex"
+                        },
                         flexDirection: "row-reverse"
                     }}
                 >
@@ -203,15 +278,6 @@ export default function offer() {
                         }}
                     />
                     <Box
-                        // sx={{
-                        //     width: 412,
-                        //     height: 358,
-                        //     borderRadius: 0,
-                        //     backgroundColor: "#0E204E",
-                        //     flexDirection: "row-reverse",
-                        //     alignSelf: "center",
-                        //     zIndex: -1
-                        // }}
                         sx={{
                             width: 235,
                             height: 445,
@@ -235,6 +301,12 @@ export default function offer() {
                         justifyContent="flex-end"
                         alignItems="center"
                         spacing={13}
+                        sx={{
+                            display: {
+                                mobile: "none",
+                                laptop: "flex"
+                            }
+                        }}
                     >
 
                         <Box
