@@ -123,7 +123,7 @@ export default function offer() {
                         />
                     </Box>
 
-                    <Box
+                    {/* <Box
                         sx={{
                             width: 235,
                             height: 445,
@@ -133,6 +133,18 @@ export default function offer() {
                             display: {
                                 mobile: "none"
                             }
+                        }}
+                    /> */}
+
+<Box
+                        sx={{
+                            width: 232,
+                            height: 445,
+                            borderRadius: 0,
+                            backgroundColor: "#0E204E",
+                            flexDirection: "row-reverse",
+                            alignSelf: "center",
+                            zIndex: -1,
                         }}
                     />
                 </Grid>

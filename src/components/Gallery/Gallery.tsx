@@ -8,7 +8,8 @@ import {
   Typography,
   Card,
   ImageList,
-  ImageListItem
+  ImageListItem,
+  Paper
 } from "@mui/material";
 import { Manrope } from "next/font/google";
 import Image from "next/image";
@@ -87,55 +88,80 @@ const mobileGalleries = [
   {
     img: mobileGallery1,
     title: 'mobileGallery1',
+    mobile: 6,
+    gridrow: 0
   },
   {
     img: mobileGallery2,
     title: 'mobileGallery2',
+    mobile: 6,
+    gridrow: 0
   },
   {
     img: mobileGallery3,
     title: 'mobileGallery3',
+    mobile: 6,
+    gridrow: 0
   },
   {
     img: mobileGallery4,
     title: 'mobileGallery4',
+    mobile: 6,
+    gridrow: 2
   },
   {
     img: mobileGallery5,
     title: 'mobileGallery5',
+    mobile: 6,
+    gridrow: 2
   },
   {
     img: mobileGallery6,
     title: 'mobileGallery6',
+    mobile: 6,
+    gridrow: 0
   },
   {
     img: mobileGallery7,
     title: 'mobileGallery7',
+    mobile: 6,
+    gridrow: 0
   },
   {
     img: mobileGallery8,
     title: 'mobileGallery8',
+    mobile: 6,
+    gridrow: 2
   },
   {
     img: mobileGallery9,
     title: 'mobileGallery9',
+    mobile: 6,
+    gridrow: 0
   },
   {
     img: mobileGallery10,
     title: 'mobileGallery10',
+    mobile: 6,
+    gridrow: 0
   },
   {
     img: mobileGallery11,
     title: 'mobileGallery11',
+    mobile: 6,
+    gridrow: 0
   },
   {
     img: mobileGallery12,
     title: 'mobileGallery12',
+    mobile: 6,
+    gridrow: 0
   },
   {
     img: mobileGallery13,
     title: 'mobileGallery13',
-    cols: 2
+    mobile: 6,
+    gridrow: 0
   },
 ];
 
@@ -146,6 +172,7 @@ export default function Gallery() {
         sx={{
           display: {
             mobile: "none",
+            gridrow: 0,
             laptop: "block"
           },
         }}
@@ -174,17 +201,25 @@ export default function Gallery() {
           a community that gives you a taste of happiness, a place you’ll love to live and <br /> an opportunity to build a home.
         </Typography>
 
-        <Container sx={{ maxWidth: '95%', mb: 30 }} maxWidth={false}>
-          <ImageList cols={3} sx={{ overflow: "hidden" }}>
+        <Container sx={{ maxWidth: '95%', mb: 30 }}>
+          <ImageList cols={3}>
             {gallery.map((item, index) => (
-              <ImageListItem sx={{ width: 553, height: 469, padding: 2 }} key={index}>
+              <Box sx={{
+                height: '469px',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                position: 'relative',
+                m: 2
+              }}
+                key={index}
+              >
                 <Image
                   src={item.img}
                   alt={item.title}
-                  width={553}
-                  height={469}
+                  layout="fill"
                 />
-              </ImageListItem>
+              </Box>
             ))}
           </ImageList>
         </Container>
@@ -225,27 +260,28 @@ export default function Gallery() {
           a community that gives you a taste of happiness, a place you’ll love to live and an opportunity to build a home.
         </Typography>
 
-          <ImageList
-            sx={{
-              overflow: "hidden",
-              p:0,
-              mb: 10
-            }}
-            gap={9}
-            cols={2}
-          >
-            {mobileGalleries.map((item, index) => (
-               <ImageListItem key={index} cols={item.cols || 1}>
-                <Image
-                  src={item.img}
-                  alt={item.title}
-                  style={{ width: "100%", height: 150 }}
-                />
-              </ImageListItem>
-            ))}
-          </ImageList>
+        <ImageList
+          sx={{
+            overflow: "hidden",
+            p: 0,
+            mb: 10
+          }}
+          gap={9}
+          cols={2}
+        >
+          {mobileGalleries.map((item, index) => (
+            <Paper key={index} sx={{ height: '150px', display: 'flex', alignItems: 'center', justifyContent: 'center', position: 'relative' }}>
+              <Image
+                src={item.img}
+                alt={item.title}
+                layout="fill"
+                objectFit="cover"
+                style={{ width: "100%", height: "100%" }}
+              />
+            </Paper>
+          ))}
+        </ImageList>
       </Box>
-
     </Box>
   )
 }

@@ -446,7 +446,9 @@ export default function Features() {
                                     mobile: "24px",
                                     desktop: "60px"
                                 },
-                                lineHeight: "80px",
+                                lineHeight: {
+                                    laptop: "80px"
+                                },
                                 width: {
                                     laptop: "100%",
                                     desktop: 317

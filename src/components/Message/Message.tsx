@@ -155,7 +155,7 @@ export default function Message() {
                         py: 1
                     }}
                 />
-                 <TextField
+                <TextField
                     label="Phone No"
                     fullWidth
                     variant="standard"
@@ -163,7 +163,7 @@ export default function Message() {
                         py: 1
                     }}
                 />
-                 <TextField
+                <TextField
                     label="Email"
                     fullWidth
                     variant="standard"
@@ -172,14 +172,22 @@ export default function Message() {
                     }}
                 />
 
-                <label>Message</label>
-                 <TextField
-                    // label="Name"
+                <Typography
+                    sx={{
+                        textAlign: "start",
+                        mt: 2,
+                        color: "rgba(0, 0, 0, 0.6)"
+                    }}
+                >
+                    Message
+                </Typography>
+                <TextField
                     fullWidth
                     // variant="standard"
                     sx={{
                         py: 1,
                     }}
+                    InputProps={{ sx: { borderRadius: 0, height: 83, borderColor: "#2D2B2B" } }}
                 />
                 <Button
                     sx={{

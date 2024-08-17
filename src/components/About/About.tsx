@@ -68,6 +68,7 @@ export default function About() {
                 >
                     About Pineapple Island
                 </Typography>
+
                 <Card sx={{
                     display: {
                         desktop: "flex"
@@ -90,14 +91,52 @@ export default function About() {
                                 laptop: '620px'
                             },
                             position: 'relative',
-                            
+                            display: 'flex',
+                            flexDirection: 'column',
+                            justifyContent: 'center',
+                            alignItems: 'center',
+                            '&::before': {
+                                content: '""',
+                                position: 'absolute',
+                                top: 0,
+                                left: 0,
+                                width: '100%',
+                                height: '100%',
+                                backgroundImage: 'linear-gradient(to top, rgba(62, 62, 62, 0.64), rgba(62, 62, 62, 0.64))',
+                                zIndex: 1,
+                                display: {
+                                    laptop: "none"
+                                }
+                            }
                         }}>
+
                         <Image
                             src={image2}
                             alt='logo'
                             layout='fill'
                             objectFit='cover'
                         />
+
+                        <Box
+                            sx={{
+                                zIndex: 2,
+                                textAlign: "center",
+                                color: 'white',
+                                display: {
+                                    mobile: "block",
+                                    laptop: "none"
+                                }
+                            }}
+                        >
+                            <Typography
+                                sx={{ my: 4, fontSize: 14, px: 8, lineHeight: "25.6px" }}
+                                className={manrope.className}
+                            >
+                                Pineapple Island is the most sought-after  community in Ibadan that values and puts the needs of their clients first. It is a territory with loft complexes that creates a country life and homely feeling that is integrated with industrial development. A perfect, professional built  abode that gives you the true taste of beauty and happiness.
+                            </Typography>
+
+
+                        </Box>
                     </Box>
 
                     <Box
