@@ -29,7 +29,7 @@ export default function Features() {
                     mobile: "0"
                 },
                 mb: {
-                    mobile: 10,
+                    mobile: 7,
                     laptop: 30
                 },
             }}
@@ -504,7 +504,7 @@ export default function Features() {
                                     laptop: "#fff"
                                 },
                                 alignSelf: "center",
-                                textTransform: "capitalize"
+                                textTransform: "capitalize",
                             }}
                             className={manrope.className}
                         >

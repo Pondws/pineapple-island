@@ -89,79 +89,72 @@ const mobileGalleries = [
     img: mobileGallery1,
     title: 'mobileGallery1',
     mobile: 6,
-    gridrow: 0
   },
   {
     img: mobileGallery2,
     title: 'mobileGallery2',
     mobile: 6,
-    gridrow: 0
   },
   {
     img: mobileGallery3,
     title: 'mobileGallery3',
     mobile: 6,
-    gridrow: 0
   },
   {
     img: mobileGallery4,
     title: 'mobileGallery4',
     mobile: 6,
-    gridrow: 2
   },
   {
     img: mobileGallery5,
     title: 'mobileGallery5',
     mobile: 6,
-    gridrow: 2
   },
   {
     img: mobileGallery6,
     title: 'mobileGallery6',
     mobile: 6,
-    gridrow: 0
   },
   {
     img: mobileGallery7,
     title: 'mobileGallery7',
     mobile: 6,
-    gridrow: 0
+    gridRow: "3 / span 2",
+    gridColumn: "2 / span 1",
+    height: "100%"
   },
   {
     img: mobileGallery8,
     title: 'mobileGallery8',
     mobile: 6,
-    gridrow: 2
+    gridRow: " 5 / span 2",
+    height: "100%"
   },
   {
     img: mobileGallery9,
     title: 'mobileGallery9',
     mobile: 6,
-    gridrow: 0
   },
   {
     img: mobileGallery10,
     title: 'mobileGallery10',
     mobile: 6,
-    gridrow: 0
   },
   {
     img: mobileGallery11,
     title: 'mobileGallery11',
     mobile: 6,
-    gridrow: 0
   },
   {
     img: mobileGallery12,
     title: 'mobileGallery12',
     mobile: 6,
-    gridrow: 0
   },
   {
     img: mobileGallery13,
     title: 'mobileGallery13',
     mobile: 6,
-    gridrow: 0
+    gridColumn: "1 / span 2"
   },
 ];
 
@@ -172,7 +165,6 @@ export default function Gallery() {
         sx={{
           display: {
             mobile: "none",
-            gridrow: 0,
             laptop: "block"
           },
         }}
@@ -210,14 +202,18 @@ export default function Gallery() {
                 alignItems: 'center',
                 justifyContent: 'center',
                 position: 'relative',
-                m: 2
+                m: 2,
+                overflow: "hidden"
               }}
                 key={index}
               >
                 <Image
                   src={item.img}
                   alt={item.title}
-                  layout="fill"
+                  fill
+                  sizes="100%"
+                  style={{ objectFit: 'cover' }}
+                // loading="lazy"
                 />
               </Box>
             ))}
@@ -243,7 +239,6 @@ export default function Gallery() {
             textAlign: "center",
             fontSize: "24px",
             color: '#0E204E',
-            // lineHeight: "80px"
           }}
         >
           Available Homes
@@ -259,28 +254,40 @@ export default function Gallery() {
         >
           a community that gives you a taste of happiness, a place you’ll love to live and an opportunity to build a home.
         </Typography>
-
-        <ImageList
+   
+        <Box
           sx={{
-            overflow: "hidden",
-            p: 0,
-            mb: 10
+            display: "grid",
+            gridTemplateColumns: "auto auto",
+            gap: 1,
+            mt: 3,
+            mb: 6
           }}
-          gap={9}
-          cols={2}
         >
           {mobileGalleries.map((item, index) => (
-            <Paper key={index} sx={{ height: '150px', display: 'flex', alignItems: 'center', justifyContent: 'center', position: 'relative' }}>
-              <Image
+            <Box key={index}
+              sx={{
+                height: item.height || '150px',
+                // display: 'block',
+                position: 'relative',
+                gridRow: item.gridRow,
+                gridColumn: item.gridColumn,
+                backgroundAttachment: 'fixed'
+              }}
+            >
+             
+             <Image
                 src={item.img}
                 alt={item.title}
-                layout="fill"
-                objectFit="cover"
-                style={{ width: "100%", height: "100%" }}
+                fill
+                sizes="100%"
+                priority
+                style={{ objectFit: 'cover' }}
               />
-            </Paper>
+            </Box>
           ))}
-        </ImageList>
+        </Box>
+
       </Box>
     </Box>
   )

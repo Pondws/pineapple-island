@@ -25,7 +25,9 @@ export default function Message() {
                         laptop: 60
                     },
                     color: '#0E204E',
-                    lineHeight: "79.98px"
+                    lineHeight: {
+                        laptop: "79.98px"
+                    }
                 }}
             >
                 Stay In Touch

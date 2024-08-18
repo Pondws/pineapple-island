@@ -92,7 +92,8 @@ export default function Hero() {
                     laptop: "flex"
                 },
                 px: {
-                    mobile: 2
+                    mobile: 2,
+                    laptop: 0
                 },
                 flexDirection: 'row-reverse',
             }}
@@ -142,6 +143,7 @@ export default function Hero() {
                         src={image1}
                         alt="Image alt"
                         style={{ objectFit: "cover" }}
+                        priority 
                     />
 
                     <Box

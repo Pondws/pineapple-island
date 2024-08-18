@@ -110,12 +110,39 @@ export default function About() {
                             }
                         }}>
 
+                        <Box
+                            sx={{
+                                position: "absolute",
+                                left: 0,
+                                zIndex: 999,
+                                p: 4
+                            }}
+                        >
+                            <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M28 10L18 20L28 30L26 34L12 20L26 6L28 10Z" fill="white" />
+                            </svg>
+                        </Box>
                         <Image
                             src={image2}
                             alt='logo'
-                            layout='fill'
-                            objectFit='cover'
+                            fill
+                            sizes="100%"
+                            priority
                         />
+
+                        <Box
+                            sx={{
+                                position: "absolute",
+                                right: 0,
+                                zIndex: 999,
+                                p: 4,
+                                rotate: "180deg"
+                            }}
+                        >
+                            <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M28 10L18 20L28 30L26 34L12 20L26 6L28 10Z" fill="white" />
+                            </svg>
+                        </Box>
 
                         <Box
                             sx={{
