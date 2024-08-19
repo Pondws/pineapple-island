@@ -158,7 +158,8 @@ export default function offer() {
                             </svg>
                             <Typography
                                 sx={{
-                                    fontSize: 12
+                                    fontSize: 12,
+                                    pt: "11px"
                                 }}
                                 className={poppins.className}
                             >

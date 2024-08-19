@@ -115,7 +115,11 @@ export default function About() {
                                 position: "absolute",
                                 left: 0,
                                 zIndex: 999,
-                                p: 4
+                                p: 4,
+                                display: {
+                                    mobile: "none",
+                                    laptop: "block"
+                                }
                             }}
                         >
                             <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -136,7 +140,11 @@ export default function About() {
                                 right: 0,
                                 zIndex: 999,
                                 p: 4,
-                                rotate: "180deg"
+                                rotate: "180deg",
+                                display: {
+                                    mobile: "none",
+                                    laptop: "block"
+                                }
                             }}
                         >
                             <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
