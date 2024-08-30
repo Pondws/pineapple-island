@@ -1,10 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Playfair+Display:ital,wght@0,700;1,700&display=swap');
 body {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
-  /* overflow-x: hidden; */
-  /* font-family: monospace; */
 }
 
+::-webkit-scrollbar {
+  display: none;
+}
 
+@media all and (min-width: 1024px) and (max-width: 1280px) {
+  html {
+    zoom: 58%;
+  }
+}
 
+@media all and (min-width: 1281px) and (max-width: 1699px) {
+  html {
+    zoom: 79%;
+  }
+}
+
+@media all and (min-width: 1700px) and (max-width: 1920px) {
+  html {
+    zoom: 100%;
+  }
+}
+
+@media all and (min-width: 1921px) and (max-width: 2560px) {
+  html {
+    zoom: 110%;
+  }
+}
+
+@media all and (min-width: 2561px) {
+  html {
+    zoom: 155%;
+  }
+}

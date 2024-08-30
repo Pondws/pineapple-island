@@ -1,6 +1,4 @@
 import { Manrope } from "next/font/google";
-import styles from "@/styles/Home.module.css";
-import Image from 'next/image'
 
 import {
   Box,
@@ -12,7 +10,8 @@ import {
   Typography,
   Card,
   ImageList,
-  ImageListItem
+  ImageListItem,
+  createTheme
 } from "@mui/material";
 
 import Navbar from "@/components/Navbar/Navbar";
@@ -32,7 +31,7 @@ const manrope = Manrope({
 
 export default function Home() {
   return (
-    <Box>
+    <Box className={manrope.className}>
       <Navbar />
       <Hero />
       <About />
