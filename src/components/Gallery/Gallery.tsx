@@ -197,7 +197,7 @@ export default function Gallery() {
           <ImageList cols={3}>
             {gallery.map((item, index) => (
               <Box sx={{
-                height: '469px',
+                height: 469,
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center',
@@ -213,7 +213,6 @@ export default function Gallery() {
                   fill
                   sizes="100%"
                   style={{ objectFit: 'cover' }}
-                // loading="lazy"
                 />
               </Box>
             ))}
@@ -254,7 +253,7 @@ export default function Gallery() {
         >
           a community that gives you a taste of happiness, a place you’ll love to live and an opportunity to build a home.
         </Typography>
-   
+
         <Box
           sx={{
             display: "grid",
@@ -267,16 +266,18 @@ export default function Gallery() {
           {mobileGalleries.map((item, index) => (
             <Box key={index}
               sx={{
-                height: item.height || '150px',
-                // display: 'block',
+                height: item.height || {
+                  mobile: 150,
+                  tablet: 250
+                },
                 position: 'relative',
                 gridRow: item.gridRow,
                 gridColumn: item.gridColumn,
                 backgroundAttachment: 'fixed'
               }}
             >
-             
-             <Image
+
+              <Image
                 src={item.img}
                 alt={item.title}
                 fill
