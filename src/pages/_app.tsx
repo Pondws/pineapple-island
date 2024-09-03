@@ -52,11 +52,6 @@ const theme = createTheme({
       fontWeight: 700,
       fontSize: 60,
     },
-    // h5: {
-    //   fontFamily: lato.style.fontFamily,
-    //   fontWeight: 500,
-    //   fontSize: 16,
-    // },
     button: {
       fontFamily: lato.style.fontFamily,
       fontWeight: 500,

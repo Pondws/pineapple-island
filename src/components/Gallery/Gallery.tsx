@@ -100,13 +100,16 @@ export default function Gallery() {
                 laptop: 726
               },
               textAlign: "center",
-              lineHeight: "36px",
+              lineHeight: {
+                mobile: "25.6px",
+                laptop: "36px"
+              },
               fontSize: {
                 laptop: 20
               },
               my: {
                 laptop: 2
-              }
+              },
             }}
           >
             a community that gives you a taste of happiness, a place you’ll love to live and an opportunity to build a home.
