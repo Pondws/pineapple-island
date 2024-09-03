@@ -18,6 +18,7 @@ import icon5 from '../../images/icon5.png'
 import icon6 from '../../images/icon6.png'
 
 import { Poppins } from "next/font/google";
+
 const poppins = Poppins({
   weight: '400',
   subsets: ['latin'],
@@ -37,13 +38,10 @@ export default function offer() {
       }}
     >
       <Typography
+        variant="h1"
         sx={{
-          fontFamily: "Playfair Display",
-          fontWeight: 700,
           textAlign: "center",
-          fontSize: "60px",
           color: '#0E204E',
-          lineHeight: "80px",
           mb: 15,
           display: {
             mobile: "none",
@@ -55,13 +53,11 @@ export default function offer() {
       </Typography>
 
       <Typography
+        variant="h1"
         sx={{
-          fontFamily: "Playfair Display",
-          fontWeight: 700,
           textAlign: "center",
           fontSize: "24px",
           color: '#0E204E',
-          lineHeight: "80px",
           display: {
             mobile: "block",
             laptop: "none"

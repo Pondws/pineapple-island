@@ -168,12 +168,20 @@ export default function Footer() {
           >
             <Typography
               sx={{
+                fontSize: 16,
+                pr: 0.5
+              }}
+            >
+              &copy;
+            </Typography>
+            <Typography
+              sx={{
                 fontSize: 10,
                 fontWeight: 500,
                 alignSelf: "center",
               }}
             >
-               &copy; Copyright 2021 Glowdsgn All Rights Reserved
+              Copyright 2021 Glowdsgn All Rights Reserved
             </Typography>
           </Box>
 
