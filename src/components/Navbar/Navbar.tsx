@@ -1,11 +1,13 @@
 import React, { useState } from 'react'
-import AppBar from '@mui/material/AppBar';
-import Box from '@mui/material/Box';
-import Toolbar from '@mui/material/Toolbar';
-import Typography from '@mui/material/Typography';
-import Container from '@mui/material/Container';
-import Button from '@mui/material/Button';
-import { Link } from '@mui/material';
+import {
+  AppBar,
+  Box,
+  Toolbar,
+  Typography,
+  Button,
+  Container,
+  Link
+} from '@mui/material';
 import styles from "./Navbar.module.css";
 
 import { Manrope } from "next/font/google";
@@ -106,12 +108,13 @@ export default function Navbar() {
               {menus.map((item, index) => (
                 <Link
                   key={index}
-                  href="#"
+                  href={`#${item}`}
                   underline="none"
                   sx={{
                     color: "#000",
                     fontSize: 20,
                   }}
+                  style={{scrollBehavior:'smooth'}}
                   className={manrope.className}
                 >
                   {item}
@@ -128,6 +131,7 @@ export default function Navbar() {
               }}
             >
               <Button
+                href='#Message'
                 variant="text"
                 style={{
                   backgroundColor: "#0E204E",

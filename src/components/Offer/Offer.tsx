@@ -26,6 +26,7 @@ const poppins = Poppins({
 export default function offer() {
   return (
     <Container
+      id="What we do"
       sx={{
         maxWidth: {
           laptop: '85%'
