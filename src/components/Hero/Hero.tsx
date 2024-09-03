@@ -3,14 +3,8 @@ import {
   Button,
   Typography,
 } from "@mui/material";
-import { Manrope } from "next/font/google";
 import Image from "next/image";
 import image1 from '../../images/1.jpg'
-
-const manrope = Manrope({
-  weight: '400',
-  subsets: ['latin'],
-})
 
 export default function Hero() {
   return (
@@ -46,9 +40,8 @@ export default function Hero() {
       >
 
         <Typography
+          variant="h1"
           sx={{
-            fontFamily: "Playfair Display",
-            fontWeight: 700,
             fontSize: "64px",
             px: {
               laptop: 12
@@ -84,7 +77,6 @@ export default function Hero() {
             fontSize: 20,
             pt: 3,
           }}
-          className={manrope.className}
         >
           a community that gives you a taste of happiness, a place you’ll love to
           live and an opportunity to build a home.
@@ -165,9 +157,8 @@ export default function Hero() {
             }}
           >
             <Typography
+              variant="h1"
               sx={{
-                fontWeight: 700,
-                fontFamily: "Playfair Display",
                 fontSize: 26,
                 lineHeight: "34.66px",
               }}
@@ -181,7 +172,6 @@ export default function Hero() {
                 fontSize: 14,
                 px: 1,
               }}
-              className={manrope.className}
             >
               a community that gives you a taste of happiness, a place you’ll love to live and an opportunity to build a home.
             </Typography>
@@ -193,30 +183,18 @@ export default function Hero() {
                   mobile: "#fff",
                   laptop: "#0E204E"
                 },
-                borderRadius: {
-                  mobile: "5px",
-                },
-                width: {
-                  mobile: 127,
-                },
-                height: {
-                  mobile: 40,
-                },
-                fontSize: {
-                  mobile: 16,
-                },
-                color: {
-                  mobile: "#0E204E",
-                },
+                width: 127,
+                height: 40,
+                fontSize: 16,
+                color: "#0E204E",
                 alignSelf: "center",
                 textTransform: "capitalize",
                 '&:hover': {
                   background: {
                     mobile: "#fff",
                   }
-                }
+                },
               }}
-              className={manrope.className}
             >
               Get in Touch
             </Button>
