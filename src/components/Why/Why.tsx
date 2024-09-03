@@ -57,7 +57,10 @@ export default function Why() {
               pt: {
                 laptop: 15
               },
-              p: 2
+              p: 2,
+              mb: {
+                mobile: 5
+              }
             }}
           >
             <Typography
@@ -101,7 +104,6 @@ export default function Why() {
                   laptop: "#FFFF"
                 },
                 width: {
-                  mobile: "none",
                   laptop: 440
                 },
                 height: {
@@ -132,7 +134,6 @@ export default function Why() {
                     laptop: 11
                   },
                   fontSize: {
-                    mobile: 16,
                     laptop: 20
                   },
                   borderRadius: 0,

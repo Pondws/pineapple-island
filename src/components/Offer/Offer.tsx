@@ -3,7 +3,8 @@ import {
   Container,
   Grid,
   Stack,
-  Typography
+  Typography,
+  useMediaQuery,
 } from "@mui/material";
 import Image from "next/image";
 
@@ -24,7 +25,8 @@ const poppins = Poppins({
   subsets: ['latin'],
 })
 
-export default function offer() {
+export default function Offer() {
+  const Mobile = useMediaQuery('(min-width:1024px)')
   return (
     <Container
       id="What we do"
@@ -42,30 +44,19 @@ export default function offer() {
         sx={{
           textAlign: "center",
           color: '#0E204E',
-          mb: 15,
-          display: {
-            mobile: "none",
-            laptop: "block"
-          }
+          mb: {
+            mobile: 3,
+            laptop: 15
+          },
+          fontSize: {
+            mobile: 24,
+            laptop: 60
+          },
         }}
       >
-        What Pineapple Land Offers
+        {Mobile ? "What Pineapple Land Offers" : "Pineapple Island Offers"}
       </Typography>
 
-      <Typography
-        variant="h1"
-        sx={{
-          textAlign: "center",
-          fontSize: "24px",
-          color: '#0E204E',
-          display: {
-            mobile: "block",
-            laptop: "none"
-          }
-        }}
-      >
-        Pineapple Island Offers
-      </Typography>
 
       <Box
         sx={{
