@@ -14,7 +14,9 @@ const manrope = Manrope({
 
 export default function Message() {
   return (
-    <Box>
+    <Box
+      id="Message"
+    >
       <Typography
         sx={{
           fontFamily: "Playfair Display",

@@ -114,7 +114,9 @@ export default function Hero() {
               mobile: 643,
               laptop: 717
             },
-            zIndex: -1,
+            zIndex: {
+              laptop: -1
+            },
             clipPath: {
               mobile: "polygon(0% 0%, 100% 0, 100% 100%, 75% 90%, 0% 100%)",
               laptop: "polygon(0% 0%, 100% 0, 100% 100%, 75% 82%, 0% 100%)"
@@ -153,7 +155,7 @@ export default function Hero() {
 
           <Box
             sx={{
-              zIndex: 2,
+              zIndex: 999,
               textAlign: "center",
               color: 'white',
               display: {
@@ -174,9 +176,9 @@ export default function Hero() {
               GenZ and Millenial Abode
             </Typography>
             <Typography
-              sx={{ 
-                my: 4, 
-                fontSize: 14, 
+              sx={{
+                my: 4,
+                fontSize: 14,
                 px: 1,
               }}
               className={manrope.className}
@@ -185,6 +187,7 @@ export default function Hero() {
             </Typography>
 
             <Button
+              href="#Message"
               sx={{
                 backgroundColor: {
                   mobile: "#fff",
@@ -206,7 +209,12 @@ export default function Hero() {
                   mobile: "#0E204E",
                 },
                 alignSelf: "center",
-                textTransform: "capitalize"
+                textTransform: "capitalize",
+                '&:hover': {
+                  background: {
+                    mobile: "#fff",
+                  }
+                }
               }}
               className={manrope.className}
             >
@@ -214,7 +222,6 @@ export default function Hero() {
             </Button>
           </Box>
         </Box>
-
       </Box>
     </Box >
   )

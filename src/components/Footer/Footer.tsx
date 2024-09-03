@@ -1,13 +1,18 @@
-import { Manrope } from "next/font/google";
-import { 
-  Box, 
-  Container, 
-  Grid, 
-  OutlinedInput, 
-  Typography 
+import { Lato, Manrope } from "next/font/google";
+import {
+  Box,
+  Container,
+  Grid,
+  OutlinedInput,
+  Typography
 } from "@mui/material";
 
 const manrope = Manrope({
+  weight: '400',
+  subsets: ['latin'],
+})
+
+const lato = Lato({
   weight: '400',
   subsets: ['latin'],
 })
@@ -147,18 +152,31 @@ export default function Footer() {
           <Typography
             sx={{
               color: "#fff",
-              fontSize: 18
+              fontSize: 18,
             }}
+            className={lato.className}
           >
             Pineapple Island
           </Typography>
-          <Typography
+
+          <Box
             sx={{
-              fontSize: 10
+              display: "flex",
+              alignContent: "center",
+              justifyContent: "center"
             }}
           >
-            &copy;	Copyright 2021 Glowdsgn All Rights Reserved
-          </Typography>
+            <Typography
+              sx={{
+                fontSize: 10,
+                fontWeight: 500,
+                alignSelf: "center",
+              }}
+            >
+               &copy; Copyright 2021 Glowdsgn All Rights Reserved
+            </Typography>
+          </Box>
+
         </Box>
       </Box>
     </>

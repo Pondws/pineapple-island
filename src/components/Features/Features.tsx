@@ -33,7 +33,6 @@ export default function Features() {
           laptop: 30
         },
       }}
-      maxWidth={false}
     >
       <Grid container
         sx={{
