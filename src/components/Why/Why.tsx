@@ -3,17 +3,13 @@ import {
   Typography,
 } from "@mui/material";
 
-import { Manrope } from "next/font/google";
-
-const manrope = Manrope({
-  weight: '400',
-  subsets: ['latin'],
-})
-
 import image3 from '../../images/3.jpg'
 import Image from "next/image";
 
+import useMediaQuery from '@mui/material/useMediaQuery';
+
 export default function Why() {
+  const Mobile = useMediaQuery('(min-width:1024px)');
   return (
     <>
       <Box
@@ -61,13 +57,15 @@ export default function Why() {
               pt: {
                 laptop: 15
               },
-              p: 2
+              p: 2,
+              mb: {
+                mobile: 5
+              }
             }}
           >
             <Typography
+              variant="h1"
               sx={{
-                fontFamily: "Playfair Display",
-                fontWeight: 700,
                 fontSize: {
                   mobile: 24,
                   laptop: 60
@@ -89,8 +87,11 @@ export default function Why() {
                   laptop: "start"
                 },
                 width: {
-                  laptop: "317px"
-                }
+                  mobile: 224,
+                  tablet: "auto",
+                  laptop: 317
+                },
+                alignSelf: "center"
               }}
             >
               Why Choose Pineapple Island
@@ -103,13 +104,14 @@ export default function Why() {
                   laptop: "#FFFF"
                 },
                 width: {
-                  mobile: "none",
                   laptop: 440
                 },
                 height: {
-                  mobile: 250,
-                  tablet: 140,
                   laptop: 620
+                },
+                my: {
+                  mobile: 2,
+                  laptop: 0
                 },
                 display: "flex",
                 alignItems: "center",
@@ -124,6 +126,7 @@ export default function Why() {
               }}
             >
               <Typography
+                variant={Mobile ? "body1" : "body2"}
                 color="#0E204E"
                 sx={{
                   display: "flex",
@@ -131,13 +134,14 @@ export default function Why() {
                     laptop: 11
                   },
                   fontSize: {
-                    mobile: 16,
                     laptop: 20
                   },
                   borderRadius: 0,
-                  lineHeight: 1.5,
+                  lineHeight: {
+                    mobile: "25.6px",
+                    laptop: "32px"
+                  }
                 }}
-                className={manrope.className}
               >
                 Pineapple Island is the most sought-after  community in Ibadan that values and puts the needs of their clients first. It is a territory with loft complexes that creates a country life and homely feeling that is integrated with industrial development. A perfect, professional built  abode that gives you the true taste of beauty and happiness.
               </Typography>
