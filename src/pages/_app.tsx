@@ -1,7 +1,8 @@
 import "@/styles/globals.css";
 import { createTheme, ThemeProvider } from "@mui/material";
 import type { AppProps } from "next/app";
-import { Lato, Manrope } from "next/font/google";
+import { Lato, Manrope, Poppins } from "next/font/google";
+import localFont from 'next/font/local'
 
 const manrope = Manrope({
   weight: '400',
@@ -12,6 +13,12 @@ const lato = Lato({
   weight: ['300', '400'],
   subsets: ['latin'],
 })
+
+const poppins = Poppins({
+  weight: '400',
+  subsets: ['latin'],
+})
+
 
 declare module '@mui/material/styles' {
   interface BreakpointOverrides {
@@ -26,6 +33,21 @@ declare module '@mui/material/styles' {
     desktop: true;
   }
 }
+
+const gotham = localFont({
+  src: [
+    {
+      path: '../../public/fonts/Gotham-Book.otf',
+      weight: "400",
+      style: "normal"
+    },
+    {
+      path: '../../public/fonts/Gotham-Thin.otf',
+      weight: "300",
+      style: "normal"
+    }
+  ]
+})
 
 const theme = createTheme({
   breakpoints: {
@@ -47,23 +69,35 @@ const theme = createTheme({
       fontWeight: 300,
       fontSize: 16,
     },
+    button: {
+      fontFamily: lato.style.fontFamily,
+      fontWeight: 500,
+      fontSize: 16,
+    },
     h1: {
       fontFamily: "Playfair Display",
       fontWeight: 700,
       fontSize: 60,
     },
-    button: {
-      fontFamily: lato.style.fontFamily,
-      fontWeight: 500,
-      fontSize: 16,
-    }
+    h5: {
+      fontFamily: poppins.style.fontFamily,
+      fontWeight: 400,
+      fontSize: 18,
+    },
+    h6: {
+      fontFamily: gotham.style.fontFamily,
+      fontWeight: 300,
+      fontSize: 10,
+    },
   },
 });
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
-    <ThemeProvider theme={theme}>
-      <Component {...pageProps} />
-    </ThemeProvider>
+    <main className={gotham.className}>
+      <ThemeProvider theme={theme}>
+        <Component {...pageProps} />
+      </ThemeProvider>
+    </main>
   )
 }

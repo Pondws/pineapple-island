@@ -126,7 +126,7 @@ export default function About() {
 
             <Image
               src={Mobile ? slide[currentSlide] : slide[0]}
-              alt='logo'
+              alt='image'
               fill
               sizes="100%"
               priority
@@ -188,10 +188,11 @@ export default function About() {
               }}
             >
               <Typography
+                variant="body2"
                 sx={{
+                  fontWeight: 400,
                   my: 4,
-                  fontSize: 14,
-                  px: 8,
+                  px: 7,
                   lineHeight: "25.6px",
                 }}
               >

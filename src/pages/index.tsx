@@ -1,17 +1,5 @@
-import { Manrope } from "next/font/google";
-
 import {
   Box,
-  Button,
-  Container,
-  Grid,
-  Stack,
-  TextField,
-  Typography,
-  Card,
-  ImageList,
-  ImageListItem,
-  createTheme
 } from "@mui/material";
 
 import Navbar from "@/components/Navbar/Navbar";
@@ -24,14 +12,9 @@ import Offer from "@/components/Offer/Offer";
 import Features from "@/components/Features/Features";
 import Why from "@/components/Why/Why";
 
-const manrope = Manrope({
-  weight: '400',
-  subsets: ['latin'],
-})
-
 export default function Home() {
   return (
-    <Box className={manrope.className}>
+    <Box>
       <Navbar />
       <Hero />
       <About />

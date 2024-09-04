@@ -108,14 +108,22 @@ export default function Message() {
             borderRadius: 0,
             width: 141,
             height: 48,
-            fontSize: 18,
             color: "white",
             alignSelf: "center",
             my: 5,
-            textTransform: "capitalize"
+            textTransform: "capitalize",
+            '&:hover': {
+              background: "#0E204E"
+            },
           }}
         >
-          Send
+          <Typography
+            sx={{
+              fontSize: 18
+            }}
+          >
+            Send
+          </Typography>
         </Button>
       </Box>
 
@@ -165,11 +173,16 @@ export default function Message() {
         <TextField
           fullWidth
           sx={{
-            py: 1
+            py: 1,
           }}
           multiline
           rows={4}
-          InputProps={{ sx: { borderRadius: 0, borderColor: "#2D2B2B" } }}
+          InputProps={{ 
+            sx: { 
+              borderRadius: 0,
+              border: "1px solid rgba(0, 0, 0, 0.35)"
+            } 
+          }}
         />
         <Button
           sx={{

@@ -1,4 +1,3 @@
-import { Lato, Manrope } from "next/font/google";
 import {
   Box,
   Container,
@@ -6,16 +5,6 @@ import {
   OutlinedInput,
   Typography
 } from "@mui/material";
-
-const manrope = Manrope({
-  weight: '400',
-  subsets: ['latin'],
-})
-
-const lato = Lato({
-  weight: '400',
-  subsets: ['latin'],
-})
 
 export default function Footer() {
   return (
@@ -61,20 +50,21 @@ export default function Footer() {
             >
               <Box>
                 <Typography
+                  variant="body1"
                   sx={{
                     fontSize: 40,
                     width: 141,
                     pb: 4,
+                    fontWeight: 500
                   }}
-                  className={manrope.className}
                 >
                   Banana
                   Island
                 </Typography>
                 <Typography
+                  variant="body1"
                   sx={{
                     width: 337,
-                    fontSize: 20
                   }}
                 >
                   a community that gives you a taste of happiness, a place you’ll love to live and an opportunity to build a home.
@@ -92,21 +82,21 @@ export default function Footer() {
             >
 
               <Typography
+                variant="h1"
                 sx={{
                   fontSize: 24,
-                  fontFamily: "Playfair Display",
+                  fontWeight: 400
                 }}
               >
                 Follow up
               </Typography>
 
               <Typography
+                variant="body1"
                 sx={{
-                  fontSize: 20,
                   py: 2,
                   width: 330
                 }}
-                className={manrope.className}
               >
                 Keep up with our newsletter to get updates about projects and offers
               </Typography>
@@ -121,15 +111,17 @@ export default function Footer() {
                     borderRadius: 0,
                     width: "100%",
                     height: 46,
-
+                    color: "rgba(0, 0, 0, 0.6)",
                   }}
                   placeholder='Email'
                 />
                 <Typography
+                  variant="h6"
                   sx={{
                     color: "#0E204E",
+                    fontSize: 20,
                     position: "absolute",
-                    top: 10,
+                    top: 8,
                     right: 20
                   }}
                 >
@@ -154,7 +146,6 @@ export default function Footer() {
               color: "#fff",
               fontSize: 18,
             }}
-            className={lato.className}
           >
             Pineapple Island
           </Typography>
@@ -175,9 +166,8 @@ export default function Footer() {
               &copy;
             </Typography>
             <Typography
+              variant="h6"
               sx={{
-                fontSize: 10,
-                fontWeight: 500,
                 alignSelf: "center",
               }}
             >

@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Playfair+Display:ital,wght@0,700;1,700&display=swap');
+
 html {
   scroll-behavior: smooth;
 }
@@ -21,7 +22,7 @@ body {
 
 @media all and (min-width: 1281px) and (max-width: 1699px) {
   html {
-    zoom: 79%;
+    zoom: 77%;
   }
 }
 
@@ -41,5 +42,27 @@ body {
   html {
     zoom: 155%;
   }
+}
+
+.css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input {
+  padding: 16.5px 125px 16.5px 30px;
+  font-family: '__gotham_efd8d7','__gotham_Fallback_efd8d7';
+}
+
+.css-1x51dt5-MuiInputBase-input-MuiInput-input {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.35);
+}
+
+.css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input::placeholder {
+  opacity: 1;
+}
+
+.css-1sqnrkk-MuiInputBase-input-MuiOutlinedInput-input::placeholder {
+  color: #000;
+  opacity: 1;
+}
+
+.css-1rsacku-MuiInputBase-root-MuiOutlinedInput-root {
+  padding: 30px;
 }
 

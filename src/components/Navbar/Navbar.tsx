@@ -99,14 +99,13 @@ export default function Navbar() {
             >
               {menus.map((item, index) => (
                 <Link
+                  variant='body1'
                   key={index}
                   href={`#${item}`}
                   underline="none"
                   sx={{
-                    color: "#000",
-                    fontSize: 20,
+                    color: "#232323",
                   }}
-                  style={{scrollBehavior:'smooth'}}
                 >
                   {item}
                 </Link>
