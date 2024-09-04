@@ -4,18 +4,12 @@ import {
   Typography,
   Button
 } from "@mui/material";
-import { Manrope } from "next/font/google";
 import Image from "next/image";
 import image2 from '../../images/2.jpg'
 import image3 from '../../images/3.jpg'
 import image4 from '../../images/4.jpg'
 import { useState } from "react";
 import useMediaQuery from '@mui/material/useMediaQuery';
-
-const manrope = Manrope({
-  weight: '400',
-  subsets: ['latin'],
-})
 
 export default function About() {
   const [currentSlide, setCurrentSlide] = useState(0)
@@ -61,9 +55,8 @@ export default function About() {
         }}
       >
         <Typography
+          variant="h1"
           sx={{
-            fontFamily: "Playfair Display",
-            fontWeight: 700,
             fontSize: {
               mobile: 24,
               laptop: 60
@@ -80,16 +73,15 @@ export default function About() {
             color: "#0E204E",
             width: {
               mobile: "100%",
-              laptop: "317px"
+              laptop: 317
             },
             textAlign: {
               mobile: "center",
-              tablet: "center",
               laptop: "start",
             }
           }}
         >
-          About Pineapple Island
+          About <br /> Pineapple Island
         </Typography>
 
         <Box sx={{
@@ -134,7 +126,7 @@ export default function About() {
 
             <Image
               src={Mobile ? slide[currentSlide] : slide[0]}
-              alt='logo'
+              alt='image'
               fill
               sizes="100%"
               priority
@@ -196,13 +188,13 @@ export default function About() {
               }}
             >
               <Typography
+                variant="body2"
                 sx={{
+                  fontWeight: 400,
                   my: 4,
-                  fontSize: 14,
-                  px: 8,
+                  px: 7,
                   lineHeight: "25.6px",
                 }}
-                className={manrope.className}
               >
                 Pineapple Island is the most sought-after  community in Ibadan that values and puts the needs of their clients first. It is a territory with loft complexes that creates a country life and homely feeling that is integrated with industrial development. A perfect, professional built  abode that gives you the true taste of beauty and happiness.
               </Typography>
@@ -221,21 +213,17 @@ export default function About() {
             }}
           >
             <Typography
-              variant="subtitle1"
               color="#ffff"
               sx={{
                 px: 8,
-                fontSize: 20,
                 lineHeight: "32px",
                 borderRadius: 0,
                 width: "315px"
               }}
-              className={manrope.className}
             >
               Pineapple Island is the most sought-after  community in Ibadan that values and puts the needs of their clients first. It is a territory with loft complexes that creates a country life and homely feeling that is integrated with industrial development. A perfect, professional built  abode that gives you the true taste of beauty and happiness.
             </Typography>
           </Box>
-
         </Box>
       </Box>
     </Container>

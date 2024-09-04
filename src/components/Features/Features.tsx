@@ -1,4 +1,3 @@
-import { Manrope } from "next/font/google";
 import {
   Box,
   Button,
@@ -6,18 +5,81 @@ import {
   Container,
   Grid,
   Typography,
+  useMediaQuery,
 } from "@mui/material";
 
 import image6 from '../../images/6.jpg'
 import image7 from '../../images/7.jpg'
 import Image from 'next/image';
 
-const manrope = Manrope({
-  weight: '400',
-  subsets: ['latin'],
-})
-
 export default function Features() {
+  const Mobile = useMediaQuery('(min-width:1024px)');
+  const List = () => {
+    const featureList = []
+    for (let i = 0; i < 5; i++) {
+      featureList.push(
+        <Box key={i}
+          sx={{
+            color: "#030033"
+          }}
+        >
+          <Box
+            sx={{
+              display: "flex",
+              justifyContent: "space-between",
+              backgroundColor: "rgba(14, 63, 51, 0.2)",
+              px: 3,
+            }}
+          >
+            <Typography
+              variant="h6"
+              sx={{
+                fontSize: 20,
+                fontWeight: 400,
+                py: 1,
+              }}
+            >
+              Lorem ipsum dolor sit amet, consectetur
+            </Typography>
+            <Checkbox
+              defaultChecked
+              style={{
+                color: "#0E204E",
+                padding: 0
+              }}
+            />
+          </Box>
+          <Box
+            sx={{
+              display: "flex",
+              justifyContent: "space-between",
+              px: 3
+            }}
+          >
+            <Typography
+              variant="h6"
+              sx={{
+                fontSize: 20,
+                fontWeight: 400,
+                py: 3,
+              }}
+            >
+              Lorem ipsum dolor sit amet, consectetur
+            </Typography>
+            <Checkbox
+              defaultChecked
+              style={{
+                color: "#0E204E",
+                padding: 0
+              }}
+            />
+          </Box>
+        </Box>
+      )
+    }
+    return featureList
+  }
+
   return (
     <Container
       sx={{
@@ -41,10 +103,9 @@ export default function Features() {
             mobile: "none",
             laptop: "flex"
           },
-          justifyContent: "space-between"
         }}
       >
-        <Grid item desktop={7}
+        <Grid item laptop={7}
           sx={{
             display: "flex",
           }}
@@ -61,20 +122,16 @@ export default function Features() {
               height: 445,
               borderRadius: 0,
               backgroundColor: "#0E204E",
-              flexDirection: "row-reverse",
               alignSelf: "center",
               zIndex: -1,
             }}
           />
         </Grid>
-        <Grid item desktop={5}>
+        <Grid item laptop={5}>
           <Typography
+            variant="h1"
             sx={{
-              fontFamily: "Playfair Display",
-              fontWeight: 700,
-              fontSize: "60px",
               color: '#0E204E',
-              lineHeight: "80px",
               mb: 2,
             }}
           >
@@ -83,284 +140,7 @@ export default function Features() {
 
           {/* List */}
           <Box>
-            <Box>
-              <Box
-                sx={{
-                  display: "flex",
-                  justifyContent: "space-between",
-                  backgroundColor: "rgba(14, 63, 51, 0.2)",
-                  px: 3
-                }}
-              >
-                <Typography
-                  sx={{
-                    fontSize: 20,
-                    fontWeight: 400,
-                    py: 1,
-                  }}
-                  className={manrope.className}
-
-                >
-                  Lorem ipsum dolor sit amet, consectetur
-                </Typography>
-                <Checkbox
-                  defaultChecked
-                  style={{
-                    color: "#0E204E",
-                    padding: 0
-                  }}
-                />
-              </Box>
-              <Box
-                sx={{
-                  display: "flex",
-                  justifyContent: "space-between",
-                  px: 3
-                }}
-              >
-                <Typography
-                  sx={{
-                    fontSize: 20,
-                    fontWeight: 400,
-                    py: 3,
-                  }}
-                  className={manrope.className}
-
-                >
-                  Lorem ipsum dolor sit amet, consectetur
-                </Typography>
-                <Checkbox
-                  defaultChecked
-                  style={{
-                    color: "#0E204E",
-                    padding: 0
-                  }}
-                />
-              </Box>
-
-            </Box>
-            <Box>
-              <Box
-                sx={{
-                  display: "flex",
-                  justifyContent: "space-between",
-                  backgroundColor: "rgba(14, 63, 51, 0.2)",
-                  px: 3
-                }}
-              >
-                <Typography
-                  sx={{
-                    fontSize: 20,
-                    fontWeight: 400,
-                    py: 1,
-                  }}
-                  className={manrope.className}
-
-                >
-                  Lorem ipsum dolor sit amet, consectetur
-                </Typography>
-                <Checkbox
-                  defaultChecked
-                  style={{
-                    color: "#0E204E",
-                    padding: 0
-                  }}
-                />
-              </Box>
-              <Box
-                sx={{
-                  display: "flex",
-                  justifyContent: "space-between",
-                  px: 3
-                }}
-              >
-                <Typography
-                  sx={{
-                    fontSize: 20,
-                    fontWeight: 400,
-                    py: 3,
-                  }}
-                  className={manrope.className}
-
-                >
-                  Lorem ipsum dolor sit amet, consectetur
-                </Typography>
-                <Checkbox
-                  defaultChecked
-                  style={{
-                    color: "#0E204E",
-                    padding: 0
-                  }}
-                />
-              </Box>
-
-            </Box>
-            <Box>
-              <Box
-                sx={{
-                  display: "flex",
-                  justifyContent: "space-between",
-                  backgroundColor: "rgba(14, 63, 51, 0.2)",
-                  px: 3
-                }}
-              >
-                <Typography
-                  sx={{
-                    fontSize: 20,
-                    fontWeight: 400,
-                    py: 1,
-                  }}
-                  className={manrope.className}
-
-                >
-                  Lorem ipsum dolor sit amet, consectetur
-                </Typography>
-                <Checkbox
-                  defaultChecked
-                  style={{
-                    color: "#0E204E",
-                    padding: 0
-                  }}
-                />
-              </Box>
-              <Box
-                sx={{
-                  display: "flex",
-                  justifyContent: "space-between",
-                  px: 3
-                }}
-              >
-                <Typography
-                  sx={{
-                    fontSize: 20,
-                    fontWeight: 400,
-                    py: 3,
-                  }}
-                  className={manrope.className}
-
-                >
-                  Lorem ipsum dolor sit amet, consectetur
-                </Typography>
-                <Checkbox
-                  defaultChecked
-                  style={{
-                    color: "#0E204E",
-                    padding: 0
-                  }}
-                />
-              </Box>
-
-            </Box>
-            <Box>
-              <Box
-                sx={{
-                  display: "flex",
-                  justifyContent: "space-between",
-                  backgroundColor: "rgba(14, 63, 51, 0.2)",
-                  px: 3
-                }}
-              >
-                <Typography
-                  sx={{
-                    fontSize: 20,
-                    fontWeight: 400,
-                    py: 1,
-                  }}
-                  className={manrope.className}
-
-                >
-                  Lorem ipsum dolor sit amet, consectetur
-                </Typography>
-                <Checkbox
-                  defaultChecked
-                  style={{
-                    color: "#0E204E",
-                    padding: 0
-                  }}
-                />
-              </Box>
-              <Box
-                sx={{
-                  display: "flex",
-                  justifyContent: "space-between",
-                  px: 3
-                }}
-              >
-                <Typography
-                  sx={{
-                    fontSize: 20,
-                    fontWeight: 400,
-                    py: 3,
-                  }}
-                  className={manrope.className}
-
-                >
-                  Lorem ipsum dolor sit amet, consectetur
-                </Typography>
-                <Checkbox
-                  defaultChecked
-                  style={{
-                    color: "#0E204E",
-                    padding: 0
-                  }}
-                />
-              </Box>
-            </Box>
-            <Box>
-              <Box
-                sx={{
-                  display: "flex",
-                  justifyContent: "space-between",
-                  backgroundColor: "rgba(14, 63, 51, 0.2)",
-                  px: 3
-                }}
-              >
-                <Typography
-                  sx={{
-                    fontSize: 20,
-                    fontWeight: 400,
-                    py: 1,
-                  }}
-                  className={manrope.className}
-
-                >
-                  Lorem ipsum dolor sit amet, consectetur
-                </Typography>
-                <Checkbox
-                  defaultChecked
-                  style={{
-                    color: "#0E204E",
-                    padding: 0
-                  }}
-                />
-              </Box>
-              <Box
-                sx={{
-                  display: "flex",
-                  justifyContent: "space-between",
-                  px: 3
-                }}
-              >
-                <Typography
-                  sx={{
-                    fontSize: 20,
-                    fontWeight: 400,
-                    py: 3,
-                  }}
-                  className={manrope.className}
-
-                >
-                  Lorem ipsum dolor sit amet, consectetur
-                </Typography>
-                <Checkbox
-                  defaultChecked
-                  style={{
-                    color: "#0E204E",
-                    padding: 0
-                  }}
-                />
-              </Box>
-            </Box>
+            {List()}
           </Box>
 
         </Grid>
@@ -372,7 +152,7 @@ export default function Features() {
           justifyContent: "space-between"
         }}
       >
-        <Grid item mobile={0} laptop={7}
+        <Grid item laptop={7}
           sx={{
             display: {
               mobile: "none",
@@ -382,6 +162,7 @@ export default function Features() {
             alignContent: "flex-end"
           }}
         >
+
           <Image
             src={image7}
             alt="image"
@@ -404,7 +185,7 @@ export default function Features() {
           />
         </Grid>
 
-        <Grid item mobile={12} laptop={5}
+        <Grid item laptop={5}
           sx={{
             display: "flex",
             justifyContent: "flex-start",
@@ -433,9 +214,8 @@ export default function Features() {
             }}
           >
             <Typography
+              variant="h1"
               sx={{
-                fontFamily: "Playfair Display",
-                fontWeight: 700,
                 fontSize: {
                   mobile: 24,
                   laptop: 60
@@ -452,6 +232,7 @@ export default function Features() {
             </Typography>
 
             <Typography
+              variant={Mobile ? "body1" : "body2"}
               sx={{
                 fontSize: {
                   mobile: 16,
@@ -462,11 +243,11 @@ export default function Features() {
                   laptop: 5
                 },
                 width: {
-                  laptop: "100%",
-                  desktop: 417
+                  mobile: "100%",
+                  laptop: 417
                 },
+                lineHeight: "25.6px"
               }}
-              className={manrope.className}
             >
               a community that gives you a taste of
               happiness, a place you’ll love to live and an
@@ -488,19 +269,13 @@ export default function Features() {
                   laptop: 239
                 },
                 height: {
-                  mobile: 40,
                   laptop: 62
-                },
-                fontSize: {
-                  mobile: 16,
-                  laptop: 18
                 },
                 color: {
                   mobile: "#0E204E",
                   laptop: "#fff"
                 },
                 alignSelf: "center",
-                textTransform: "capitalize",
                 '&:hover': {
                   background: {
                     mobile: "#fff",
@@ -508,9 +283,18 @@ export default function Features() {
                   }
                 }
               }}
-              className={manrope.className}
             >
-              Join Now
+              <Typography
+                variant={Mobile ? "h6" : "button"}
+                sx={{
+                  textTransform: "capitalize",
+                  fontSize: {
+                    laptop: 20
+                  }
+                }}
+              >
+                Join Now
+              </Typography>
             </Button>
           </Box>
         </Grid>

@@ -4,23 +4,17 @@ import {
   TextField,
   Typography,
 } from "@mui/material";
-
-import { Manrope } from "next/font/google";
-
-const manrope = Manrope({
-  weight: '400',
-  subsets: ['latin'],
-})
+import useMediaQuery from '@mui/material/useMediaQuery';
 
 export default function Message() {
+  const Mobile = useMediaQuery('(min-width:1024px)');
   return (
     <Box
       id="Message"
     >
       <Typography
+        variant="h1"
         sx={{
-          fontFamily: "Playfair Display",
-          fontWeight: 700,
           textAlign: "center",
           fontSize: {
             mobile: 24,
@@ -29,6 +23,9 @@ export default function Message() {
           color: '#0E204E',
           lineHeight: {
             laptop: "79.98px"
+          },
+          mb: {
+            laptop: 2
           }
         }}
       >
@@ -36,35 +33,15 @@ export default function Message() {
       </Typography>
 
       <Typography
+        variant={Mobile ? "body1" : "body2"}
         sx={{
           textAlign: "center",
           lineHeight: "36px",
-          fontFamily: "Manrope",
-          fontSize: "20px",
-          display: {
-            mobile: "none",
-            laptop: 'block'
-          }
-        }}
-        className={manrope.className}
-      >
-        Are you curious about Pineapple Island? Send a message
-      </Typography>
-
-      <Typography
-        sx={{
-          textAlign: "center",
-          lineHeight: "36px",
-          fontFamily: "Manrope",
           px: 2,
-          display: {
-            mobile: "block",
-            laptop: 'none'
-          }
+          my: 2
         }}
-        className={manrope.className}
       >
-        If you are interested in finding out more about The Discovery Village, leave a message
+        {Mobile ? "Are you curious about Pineapple Island? Send a message" : "If you are interested in finding out more about The Discovery Village, leave a message"}
       </Typography>
 
       <Box
@@ -131,15 +108,22 @@ export default function Message() {
             borderRadius: 0,
             width: 141,
             height: 48,
-            fontSize: 18,
             color: "white",
             alignSelf: "center",
             my: 5,
-            textTransform: "capitalize"
+            textTransform: "capitalize",
+            '&:hover': {
+              background: "#0E204E"
+            },
           }}
-          className={manrope.className}
         >
-          Send
+          <Typography
+            sx={{
+              fontSize: 18
+            }}
+          >
+            Send
+          </Typography>
         </Button>
       </Box>
 
@@ -189,11 +173,16 @@ export default function Message() {
         <TextField
           fullWidth
           sx={{
-            py: 1
+            py: 1,
           }}
           multiline
           rows={4}
-          InputProps={{ sx: { borderRadius: 0, borderColor: "#2D2B2B"} }}
+          InputProps={{ 
+            sx: { 
+              borderRadius: 0,
+              border: "1px solid rgba(0, 0, 0, 0.35)"
+            } 
+          }}
         />
         <Button
           sx={{
@@ -211,7 +200,6 @@ export default function Message() {
               background: "#0E204E"
             }
           }}
-          className={manrope.className}
         >
           Send
         </Button>

@@ -10,13 +10,6 @@ import {
 } from '@mui/material';
 import styles from "./Navbar.module.css";
 
-import { Manrope } from "next/font/google";
-
-const manrope = Manrope({
-  weight: '400',
-  subsets: ['latin'],
-})
-
 export default function Navbar() {
   const [isActive, setIsActive] = useState(true);
 
@@ -63,10 +56,9 @@ export default function Navbar() {
             }}
           >
             <Typography
+              variant='h1'
               sx={{
                 display: "flex",
-                fontFamily: 'Playfair Display',
-                fontWeight: 700,
                 fontSize: {
                   mobile: "20px",
                   tablet: '32px'
@@ -107,15 +99,13 @@ export default function Navbar() {
             >
               {menus.map((item, index) => (
                 <Link
+                  variant='body1'
                   key={index}
                   href={`#${item}`}
                   underline="none"
                   sx={{
-                    color: "#000",
-                    fontSize: 20,
+                    color: "#232323",
                   }}
-                  style={{scrollBehavior:'smooth'}}
-                  className={manrope.className}
                 >
                   {item}
                 </Link>
@@ -132,20 +122,17 @@ export default function Navbar() {
             >
               <Button
                 href='#Message'
-                variant="text"
                 style={{
                   backgroundColor: "#0E204E",
                   borderRadius: 0,
                   width: 188,
                   height: 50,
-                  fontSize: 20,
                   fontWeight: 400,
                   color: "white",
                   textTransform: "capitalize",
                 }}
-                className={manrope.className}
               >
-                Get in Touch
+                <Typography>Get in Touch</Typography>
               </Button>
             </Box>
 
